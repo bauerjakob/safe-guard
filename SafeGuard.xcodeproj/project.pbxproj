@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B22F20D52B74DBED004B875B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22F20D42B74DBED004B875B /* MainView.swift */; };
+		B2549E7C2B74D9D100ECB199 /* OneTimePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2549E7B2B74D9D100ECB199 /* OneTimePassword.swift */; };
 		B258E8922B7424DD0052EE64 /* SafeGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B258E8912B7424DD0052EE64 /* SafeGuardApp.swift */; };
 		B258E8942B7424DD0052EE64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B258E8932B7424DD0052EE64 /* ContentView.swift */; };
 		B258E8962B7424DD0052EE64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B258E8952B7424DD0052EE64 /* Assets.xcassets */; };
 		B258E89A2B7424DD0052EE64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B258E8992B7424DD0052EE64 /* Preview Assets.xcassets */; };
+		B2A465CC2B74D95A00E424FE /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = B2A465CB2B74D95A00E424FE /* SwiftOTP */; };
+		B2A465CE2B74D95A00E424FE /* SwiftOTP-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B2A465CD2B74D95A00E424FE /* SwiftOTP-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B22F20D42B74DBED004B875B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B2549E7B2B74D9D100ECB199 /* OneTimePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimePassword.swift; sourceTree = "<group>"; };
 		B258E88E2B7424DD0052EE64 /* SafeGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B258E8912B7424DD0052EE64 /* SafeGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeGuardApp.swift; sourceTree = "<group>"; };
 		B258E8932B7424DD0052EE64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,12 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A465CC2B74D95A00E424FE /* SwiftOTP in Frameworks */,
+				B2A465CE2B74D95A00E424FE /* SwiftOTP-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2549E782B74D98500ECB199 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2549E7B2B74D9D100ECB199 /* OneTimePassword.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B2549E792B74D98F00ECB199 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B22F20D42B74DBED004B875B /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B2549E7A2B74D99500ECB199 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B258E8852B7424DD0052EE64 = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +83,15 @@
 		B258E8902B7424DD0052EE64 /* SafeGuard */ = {
 			isa = PBXGroup;
 			children = (
-				B258E8912B7424DD0052EE64 /* SafeGuardApp.swift */,
-				B258E8932B7424DD0052EE64 /* ContentView.swift */,
-				B258E8952B7424DD0052EE64 /* Assets.xcassets */,
-				B258E8972B7424DD0052EE64 /* SafeGuard.entitlements */,
+				B2549E782B74D98500ECB199 /* Models */,
 				B258E8982B7424DD0052EE64 /* Preview Content */,
+				B2549E7A2B74D99500ECB199 /* Services */,
+				B2549E792B74D98F00ECB199 /* Views */,
+				B258E8972B7424DD0052EE64 /* SafeGuard.entitlements */,
+				B258E8912B7424DD0052EE64 /* SafeGuardApp.swift */,
+				B258E8952B7424DD0052EE64 /* Assets.xcassets */,
+				B258E8932B7424DD0052EE64 /* ContentView.swift */,
+				B258E8992B7424DD0052EE64 /* Preview Assets.xcassets */,
 			);
 			path = SafeGuard;
 			sourceTree = "<group>";
@@ -64,7 +99,6 @@
 		B258E8982B7424DD0052EE64 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				B258E8992B7424DD0052EE64 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -85,6 +119,10 @@
 			dependencies = (
 			);
 			name = SafeGuard;
+			packageProductDependencies = (
+				B2A465CB2B74D95A00E424FE /* SwiftOTP */,
+				B2A465CD2B74D95A00E424FE /* SwiftOTP-Dynamic */,
+			);
 			productName = SafeGuard;
 			productReference = B258E88E2B7424DD0052EE64 /* SafeGuard.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +151,9 @@
 				Base,
 			);
 			mainGroup = B258E8852B7424DD0052EE64;
+			packageReferences = (
+				B2A465CA2B74D95A00E424FE /* XCRemoteSwiftPackageReference "SwiftOTP.git" */,
+			);
 			productRefGroup = B258E88F2B7424DD0052EE64 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2549E7C2B74D9D100ECB199 /* OneTimePassword.swift in Sources */,
+				B22F20D52B74DBED004B875B /* MainView.swift in Sources */,
 				B258E8942B7424DD0052EE64 /* ContentView.swift in Sources */,
 				B258E8922B7424DD0052EE64 /* SafeGuardApp.swift in Sources */,
 			);
@@ -355,6 +398,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2A465CA2B74D95A00E424FE /* XCRemoteSwiftPackageReference "SwiftOTP.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lachlanbell/SwiftOTP.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2A465CB2B74D95A00E424FE /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2A465CA2B74D95A00E424FE /* XCRemoteSwiftPackageReference "SwiftOTP.git" */;
+			productName = SwiftOTP;
+		};
+		B2A465CD2B74D95A00E424FE /* SwiftOTP-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2A465CA2B74D95A00E424FE /* XCRemoteSwiftPackageReference "SwiftOTP.git" */;
+			productName = "SwiftOTP-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B258E8862B7424DD0052EE64 /* Project object */;
 }
